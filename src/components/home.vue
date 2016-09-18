@@ -89,6 +89,10 @@
 	               })
 
 			}
-		}
+		},
+                ready(){
+			this.getIPAdress()
+  		}
+
 	}
 </script>
