@@ -1,10 +1,10 @@
 #说明
 
-![image](https://github.com/Leon522/Vue-music/blob/master/src/assets/example1.png?raw=true)
-![image](https://github.com/Leon522/Vue-music/blob/master/src/assets/example2.gif?raw=true)
 
 #如何使用
 
+![image](https://github.com/Leon522/Vue-music/blob/master/src/assets/example1.png?raw=true)
+![image](https://github.com/Leon522/Vue-music/blob/master/src/assets/example2.gif?raw=true)
 
 ##安装
 ```
@@ -15,7 +15,7 @@ npm install
 //运行
 npm run dev
 
-//本地服务器建立
+//本地服务器建立，开启另一个终端
 node appserver.js
 
 //localhost:6789
