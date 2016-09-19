@@ -1,8 +1,8 @@
 {
-  "name": "vue-music-master",
+  "name": "vue-music",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "cmf <1903980333@qq.com>",
+  "author": "leon <ming5964471402wu@qq.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
