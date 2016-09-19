@@ -1,6 +1,11 @@
 <style>
 #side{
     width:100%;
+    background: url(../assets/c044cb12912c5931080b33a833c08261.jpg) no-repeat;
+    background-size: cover;
+    z-index: 10;
+    height: 100%;
+    position: fixed;
 }
 .pa{
     position:absolute;
