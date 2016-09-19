@@ -39,7 +39,7 @@ app.get('/test', function (req, res) {
 })
 
 app.get('/get', function (req, resn) {
-	var s=req.query.s?req.query.s:'许嵩';
+	var s=req.query.s?req.query.s:'';
 	s=encodeURI(s)
 
 //http://api.open.itmf.cn/music/mf_music/search?app_id=dev_yunyi&key=KAHDIUWqlsdjswajlGEKAW32KJD92QccE3&s=%E8%AE%B8%E5%B5%A9&page=2&size=20
