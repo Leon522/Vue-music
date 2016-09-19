@@ -1,27 +1,22 @@
-# testvux
+#说明
 
-> A Vue.js project
+![image](https://github.com/Leon522/Vue-music/blob/master/src/assets/example1.png?raw=true)
+![image](https://github.com/Leon522/Vue-music/blob/master/src/assets/example2.png?raw=true)
 
-## Build Setup
+#如何使用
 
-``` bash
-# install dependencies
+
+##安装
+```
+// 安装前请先确保已安装node和npm
+//安装依赖(建议使用淘宝镜像cnpm)
 npm install
 
-# serve with hot reload at localhost:8080
+//运行
 npm run dev
 
-# build for production with minification
-npm run build
+//本地服务器建立
+node appserver.js
 
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+//localhost:6789
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
