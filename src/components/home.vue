@@ -90,9 +90,8 @@
 
 			}
 		},
-                ready(){
+		ready:function(){
 			this.getIPAdress()
-  		}
-
+		}
 	}
 </script>

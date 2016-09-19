@@ -294,7 +294,7 @@
 <div class="song">
 	<div id="bgimg" class="bkimg" ></div> <!--backgroundImage:'(url'+singerinfo.image+')'-->
 	<div class="songtit">
-		<div class="songimh" v-link="{path:'/select'}">
+		<div class="songimh" v-link="{path:'/home/select'}">
 			<img id="songimg" v-bind:class="{'pause':start}" />
 		</div>
 		<div class="songtitle">
@@ -405,7 +405,6 @@
 	          		this.$http({
 	                method:'GET',
 	                 url:'http://'+ip+':8081/song/?hash='+hash,
-	              // 	headers: {apikey: '2596cea20d986d38d9ede9e62f301841'},
 	                }).then(function(data){
 	              		var d=data.body.data
 	                	vm.songurl=d
@@ -514,6 +513,7 @@
 				var hash=this.hash
 				var sl=[]
 				var ii=0
+				
 				for(var i=0;i<list.length;i++){
 					if(list[i].hash==hash){
 						ii=i
@@ -534,7 +534,7 @@
 				location.reload() 
 			},
 			init:function(){//初始化
-				
+				var vm = this
 				this.hash=this.$route.query.hash
 				this.singername= this.$route.query.singername
 				this.songname= this.$route.query.songname
@@ -544,9 +544,21 @@
 				$('html').one('touchstart',function(){
 					document.getElementById("h5audio_media").play();
 				});
-				var palysonglist=JSON.parse(sessionStorage.getItem('songlist'))
+				console.log(this.singername)
+				var keyurl='/?s='+vm.singername+'&size=10&page=1'
+	           	var ip=sessionStorage.getItem("adressIP")
+	            this.$http({
+	                method:'GET',
+	                url:'http://'+ip+':8081/get'+keyurl,
+	            	}).then(function(data){
+	                	vm.musicdata=data.body.data.data
+						vm.mark=false
+	                	sessionStorage.setItem('songlist',JSON.stringify(vm.musicdata))
+						var palysonglist=JSON.parse(sessionStorage.getItem('songlist'))
+						this.randepalysonglist(palysonglist) 
+	               })
+
 				
-				this.randepalysonglist(palysonglist)
 			}
 			
 		},
